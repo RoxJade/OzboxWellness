@@ -32,11 +32,25 @@
     <title>Ozbox Wellness{% block extra_title %}{% endblock %}</title>
   </head>
   <body>
+    <!-- Navbar -->
+      <!-- Mobile nav collapse -->
     <header class="container-fluid fixed-top"></header>
-
+    <!-- Messages -->
     {% if messages $}
         <div class="message-container"></div>
     {% endif %}
+
+    <!-- Blocks -->
+    {% block page_header %}
+    {% endblock %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% block postloadjs %}
+    {% endblock %}
+
+    <!-- Footer -->
 
   </body>
 </html>
