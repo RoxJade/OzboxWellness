@@ -1,0 +1,159 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: calc(100vh - 164px);
+    background-color: white;
+    font-family: 'Raleway', sans-serif;
+    color: #808080;
+}
+
+.title-font {
+    letter-spacing: .1em;
+    color: #7E8035;
+}
+
+
+/* ----------------------------------- Logo and Navbar */
+
+* {
+    -webkit-tap-highlight-color: rgba(236, 12, 12, 0) !important; 
+    -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important; 
+    outline: none !important;
+} /* Solved by Cyril! - https://wordpress.org/support/topic/border-around-burger-menu-button/#post-13131740 */
+
+
+.brand-logo {
+    width: 400px;
+}
+
+.navbar {
+    padding: 1rem 1.5rem;
+    align-items: start;
+}    
+
+.nav-item {
+    font-size: 1.1em;
+    letter-spacing: .2em;
+    margin-right: 20px;
+}
+
+.nav-link {
+    color: #808080;
+}
+
+.nav-link:hover {
+    color: #8AA0B8;  
+}
+
+a.dropdown-item {
+    color: #808080;
+}
+
+a.dropdown-item:hover {
+    color: #8AA0B8;
+}
+
+.dropdown-toggle::after {
+    content: none;
+}
+
+.fa-bars:hover {
+    color: #8AA0B8 !important;
+}
+
+.shopping-bag-icon {
+    padding-bottom: 0;
+}
+
+.fa-shopping-bag {
+    color: #808080;
+}
+
+.fas:hover{
+    color: #8AA0B8;  
+}
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+      max-width: 80%;
+    }
+  
+    .brand-logo {
+        width: 500px;
+    }
+  }
+  
+  /*  Smaller screens and large Mobile*/
+  @media only screen and (max-width: 600px) {
+      
+      .brand-logo {
+          width: 300px;
+      }
+  
+          .nav-link {
+          padding: 0;
+      }
+  
+      .navbar {
+          padding: .5rem .75rem;
+      }
+  
+      .product-details {
+      margin-top: 0px;
+      }
+  }
+  
+  /* Small mobile screens */
+  @media only screen and (max-width: 400px) {
+  
+      body {
+          height: calc(100vh - 116px);
+          font-size: .8rem;
+      }
+  
+      .brand-logo {
+          width: 270px;
+      }
+  
+      .nav-link {
+          padding: .1rem;
+      }
+  
+      .navbar {
+          padding: .5rem .7rem;
+      }
+  
+      .nav-link i.fa-lg {
+          font-size: 1rem;
+      }
+  
+      .nav-item {
+      font-size: 1rem;
+      letter-spacing: .2em;
+      margin-right: 20px;
+      }
+  
+      .product-details {
+      margin-top: 0px;
+      }
+  
+      .product-detail-row {
+          padding-top: 0px;
+      }
+  
+      .title-font {
+      letter-spacing: 0;
+      }
+  
+      .social-icon {
+      margin-right: 5px;
+      margin-left: 5px;
+      font-size: .9rem;
+      }
+  
+  }
