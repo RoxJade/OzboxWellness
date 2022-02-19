@@ -3,10 +3,11 @@ html {
 }
 
 body {
+    background: url('/media/crossfit-image.png') no-repeat center center fixed;
+    background-size: cover;
     height: calc(100vh - 164px);
-    background-color: white;
+    color: white;
     font-family: 'Raleway', sans-serif;
-    color: #808080;
 }
 
 .title-font {
@@ -28,9 +29,11 @@ body {
     width: 400px;
 }
 
+
 .navbar {
     padding: 1rem 1.5rem;
     align-items: start;
+    background: linear-gradient(-90deg, #4199AE, #57BCBC);
 }    
 
 .nav-item {
@@ -40,7 +43,7 @@ body {
 }
 
 .nav-link {
-    color: #808080;
+    color: white;
 }
 
 .nav-link:hover {
