@@ -3,16 +3,12 @@ html {
 }
 
 body {
-    background: url('/media/crossfit-image.png') no-repeat center center fixed;
-    background-size: cover;
-    height: calc(100vh - 164px);
-    color: white;
     font-family: 'Raleway', sans-serif;
 }
 
 .title-font {
     letter-spacing: .1em;
-    color: #7E8035;
+    color: white;
 }
 
 
@@ -25,16 +21,32 @@ body {
 } /* Solved by Cyril! - https://wordpress.org/support/topic/border-around-burger-menu-button/#post-13131740 */
 
 
-.brand-logo {
-    width: 400px;
+.navbar-brand {
+    width: 98vw;
+    position: absolute;
+    top: 0;
+}
+.navbar-brand img {
+    display: block;
+    margin: auto;
+    padding-top: 30px;
+}
+.navbar-nav {
+    padding-top: 150px;
+}
+.navbar {
+    min-height:120px;
+}
+.txt {
+    margin-top:120px;
+}
+.navbar-toggler {
+    margin-top:65px;
 }
 
-
-.navbar {
-    padding: 1rem 1.5rem;
-    align-items: start;
-    background: linear-gradient(-90deg, #4199AE, #57BCBC);
-}    
+.brand-logo {
+    width: 250px;
+}
 
 .nav-item {
     font-size: 1.1em;
@@ -43,7 +55,7 @@ body {
 }
 
 .nav-link {
-    color: white;
+    color: #4199ae;
 }
 
 .nav-link:hover {
@@ -71,11 +83,11 @@ a.dropdown-item:hover {
 }
 
 .fa-shopping-bag {
-    color: #808080;
+    color: #4199ae;
 }
 
 .fas:hover{
-    color: #8AA0B8;  
+    color: white;  
 }
 
 /* -------------------------------- Media Queries */
@@ -87,8 +99,12 @@ a.dropdown-item:hover {
     }
   
     .brand-logo {
-        width: 500px;
+        width: 400px;
     }
+
+    .navbar-nav {
+        padding-top: 250px;
+
   }
   
   /*  Smaller screens and large Mobile*/
