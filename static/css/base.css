@@ -11,6 +11,13 @@ body {
     color: white;
 }
 
+@font-face {
+    font-family: 'gunny_rewrittenregular';
+    src: url('/static/fonts/gnyrwn971-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 /* ----------------------------------- Logo and Navbar */
 
@@ -26,17 +33,31 @@ body {
     position: absolute;
     top: 0;
 }
+
 .navbar-brand img {
     display: block;
     margin: auto;
     padding-top: 30px;
 }
+
 .navbar-nav {
     padding-top: 150px;
 }
+.navbar-nav li{
+    border-right: 1px solid #eaeae8;
+    display: inline-block;
+    padding: 0 15px;
+    margin: 0;
+}
+
+.navbar-nav li:last-child {
+    border-right:0;
+} 
+
 .navbar {
     min-height:120px;
 }
+
 .txt {
     margin-top:120px;
 }
@@ -49,13 +70,14 @@ body {
 }
 
 .nav-item {
-    font-size: 1.1em;
+    font-size: 1.5em;
+    font-family: gunny_rewrittenregular;
     letter-spacing: .2em;
     margin-right: 20px;
 }
 
 .nav-link {
-    color: #4199ae;
+    color: #7ab1c1;
 }
 
 .nav-link:hover {
