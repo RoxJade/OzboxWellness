@@ -11,10 +11,33 @@
 {% endblock %}
 
 {% block content %}
-    <div class="grid light-background">
-        <img src="{{ MEDIA_URL }}media/plant.jpg" class="image-one img-fluid mx-auto"alt="background plant">
-        <img src="{{ MEDIA_URL }}media/hero.jpg" class="image-two img-fluid mx-auto" alt="image of woman with caption">
+<div class="container">
+    <div class="row">
+        <div class="grid light-background">
+            <img src="{{ MEDIA_URL }}media/plant.jpg" class="image-one mx-auto"alt="background plant">
+            <img src="{{ MEDIA_URL }}media/hero.jpg" class="image-two mx-auto" alt="image of woman with caption">
+        </div>
     </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="jumbotron">
+            <h3 class="text-center mb-3">About Kenah</h3>
+            <p class="lead text-center">
+            Kenah is an independent hand-crafted business developed by two art lecturers based in Somerset
+            </p>
+            <hr class="my-4" />
+            <p class="text-center">
+            We sell sustainable, handmade cards and gifts on our Etsy shop and use our studio space to deilver <br> 
+            specialised skill-based workshops to give our local community the opportunity to learn their own craft skills.
+            </p>
+            <p class="lead text-center">
+            <a class="btn btn-md btn-custom" href="workshops.html" role="button"
+                >Find out more about our workshops...</a>
+            </p>
+        </div>
+    </div>
+</div>
     
     <!--<div class="container h-100">
         <div class="row h-100">
