@@ -11,14 +11,20 @@
 {% endblock %}
 
 {% block content %}
-    <div class="d-xl-block">
+<!-- Hero image grid (not displayed mobile)-->
+    <div class="d-none d-sm-block">
         <div class="grid light-background">
-            <img src="{{ MEDIA_URL }}media/plant.jpg" class="image-one "alt="background plant">
-            <img src="{{ MEDIA_URL }}media/hero.jpg" class="image-two " alt="image of woman with caption">
-            <a class="programme-button btn btn-md rounded py-auto" href="{% url 'home' %}" role="button">Our Wellness Programmes</a>
+            <img src="{{ MEDIA_URL }}media/plant.jpg" class="image-one"alt="background plant">
+            <img src="{{ MEDIA_URL }}media/hero.jpg" class="image-two" alt="image of woman with caption">
         </div>
     </div>
-    <!-- Shop Now Button -->
+<!-- Hero image (mobile)-->
+<div class="d-block d-sm-none">
+    <div class="light-background">
+        <img src="{{ MEDIA_URL }}media/hero.jpg" class="img-fluid" alt="image of woman with caption">
+    </div>
+</div>
+    <!-- Programme button -->
 <!--<div class="container-fluid">
     <div class="row py-3">
         <div class="col-12 text-center py-3">
@@ -28,6 +34,24 @@
 </div>-->
 
     <br />
+
+    <!-- About Jummbotron -->
+    <div class="jumbotron mx-4">
+        <h3 class="text-center mb-3">What is Ozbox Wellness?</h3>
+        <p class="lead text-center">
+        We are a Wellness company, committed to help change lives for the better.
+        </p>
+        <p class="text-center">
+            Join us on our journey to make new pathways, and change the way you look after your mental well being, physical and nutritional health. 
+            Self-love is in and self-doubt is out and we are here to support you to make those changes!
+        </p>
+        <p class="lead text-center">
+            <a class="programme-button btn btn-md rounded py-auto" href="{% url 'home' %}" role="button">Find out more about our Wellness Programmes</a>
+        </p>
+      </div>
+  
+      <!--<hr class="rounded" />-->
+      <br />
 
     <!-- Hearts and three words 
 
@@ -53,41 +77,41 @@
     <section class="features container-fluid">
           <div class="row">
             <div class="col-lg-4 col-md-6 col-sm-12">
-              <img src="{{ MEDIA_URL }}media/3-features-low2.jpg"  class="w-100 rounded" alt="" />
-                <div class="my-4">
+              <img src="{{ MEDIA_URL }}media/3-features-low3.jpg"  class="w-100 rounded" alt="" />
+                <div class="my-4 mx-4">
                     <span class="my-2 display-font">
                         <img src="{{ MEDIA_URL }}media/hearts-01.svg" class="w-25" alt="">
-                    Lifestyle
+                    Exercise
                     </span>
                 <p class="inline-block">
-                    <strong>(Leading question about lifestyle improvement)?</strong> 
-                    <br> (Short intro to the lifestyle element)
+                    <h5>We know it's not always easy to fit this in, is it? </h5> 
+                    <br>  Exercise is such an important part of wellbeing. When we exercise we release endorphins, making us feel much more energised, clear minded and ready for any daily challenge. 
                 </p>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12">
-              <img src="{{ MEDIA_URL }}media/3-features-low3.jpg" class="w-100 rounded" alt="" />
-              <div class="my-4">
+              <img src="{{ MEDIA_URL }}media/3-features-low2.jpg" class="w-100 rounded" alt="" />
+              <div class="my-4 mx-4">
                 <span class="my-2 display-font">
                     <img src="{{ MEDIA_URL }}media/hearts-03.svg" class="w-25" alt="">
                     Wellness
                 </span>
                 <p class="inline-block">
-                    <strong>(Leading question about your general wellness - mental/physical health)?</strong> 
-                    <br> (Short intro of combining all elements to form mental/physical wellness).
+                    <h5>Who looks after you?</h5> 
+                    <br> Do you feel disconnected with yourself and your own self-care and find it hard to 'fit in' the things that used to make you feel good? This element helps you build self-awareness of the barriers to putting yourself first.
                 </p>
               </div>
             </div>
             <div class="col-lg-4 col-md-12 col-sm-12">
               <img src="{{ MEDIA_URL }}media/3-features-low.jpg"  class="w-100 rounded" alt="" />
-              <div class="my-4">
+              <div class="my-4 mx-4">
                 <span class="my-2 display-font">
                     <img src="{{ MEDIA_URL }}media/hearts-02.svg" class="w-25" alt="">
                     Nutrition
                 </span>
-                <p>
-                    <strong>(Leading question about nutritional improvement)?</strong> 
-                    <br>(Short intro about the nutritional elemnent). <a href="#" target="_blank">(Link to related page)</a>
+                <p class="body-font">
+                    <h5>Let us take away the complexity of eating well.</h5> 
+                    <br>When you're busy with kids all day, the last thing you want to do is decide what to eat yourself, let alone eating well! We will take the pressure off by guiding you to a healthier and tastier way of life.<a href="#" target="_blank">(Link to related page)</a>
                 </p>
               </div>
             </div>
@@ -97,26 +121,6 @@
         <hr class="rounded" />
         <br />
                 
-
-    <!--<div class="container">
-        <div class="row">
-            <div class="jumbotron">
-                <h3 class="text-center mb-3">About Kenah</h3>
-                <p class="lead text-center">
-                Kenah is an independent hand-crafted business developed by two art lecturers based in Somerset
-                </p>
-                <hr class="my-4" />
-                <p class="text-center">
-                We sell sustainable, handmade cards and gifts on our Etsy shop and use our studio space to deilver <br> 
-                specialised skill-based workshops to give our local community the opportunity to learn their own craft skills.
-                </p>
-                <p class="lead text-center">
-                <a class="btn btn-md btn-custom" href="workshops.html" role="button"
-                    >Find out more about our workshops...</a>
-                </p>
-            </div>
-        </div>
-    </div>-->
     
     <!--<div class="container h-100">
         <div class="row h-100">
@@ -134,6 +138,28 @@
             </div>
         </div>
     </div>-->
-    <!-- Newsletter Signup -->
+<!-- Newsletter Signup -->
+<div class="container bg-light p-4 pb-0">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h3>Sign up to the mailing list</h3>
+            <p class="mt-3">Receive updates on our latest programmes,  </p>
+        </div>
+    </div>
+    <div class="row  justify-content-center">
+        <div class="col-md-5 col-12 mb-4 mb-md-0">
+            <div class="form-outline mb-4">
+                <form action="{% url 'home' %}" method="POST">
+                    <div class="mb-4 mb-md-0 text-center">
+                        <button type="submit" class="btn btn-secondary mb-4 ">
+                            Subscribe
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+</div>
 
 {% endblock %}
