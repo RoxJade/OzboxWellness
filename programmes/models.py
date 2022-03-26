@@ -22,6 +22,10 @@ class Category(models.Model):
 
 class Programmes(models.Model):
     '''return product model'''
+    class Meta:
+        '''return programmess correctly'''
+        verbose_name_plural = 'Programmes'
+
     category = models.ForeignKey(
         'Category', null=True, blank=True, on_delete=models.SET_NULL)
     name = models.CharField(max_length=250)
@@ -32,5 +36,5 @@ class Programmes(models.Model):
     programme_cost = models.DecimalField(max_digits=6, decimal_places=2)
 
     def __str__(self):
-        '''return product model'''
+        '''return programme model'''
         return str(self.name)
