@@ -21,7 +21,8 @@ class Category(models.Model):
 
 
 class Programmes(models.Model):
-    '''return product model'''
+    '''return programme model'''
+
     class Meta:
         '''return programmess correctly'''
         verbose_name_plural = 'Programmes'

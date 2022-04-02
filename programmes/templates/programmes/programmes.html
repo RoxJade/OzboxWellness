@@ -23,12 +23,12 @@
             <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                 <div class="card h-100 border-0">
                     {% if programme.image %}
-                    <a href="{% url '/' programme.id %}">
+                    <a href="">
                         <img class="card-img-top img-fluid" src="{{ programme.image.url }}" 
                             alt="{{ programme.name }}">
                     </a>
                     {% else %}
-                    <a href="{% url 'programmes' programme.id %}">
+                    <a href="">
                         <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" 
                             alt="{{ programme.name }}">
                     </a>
@@ -39,15 +39,15 @@
                     <div class="card-footer bg-white pt-0 border-0 text-left">
                         <div class="row">
                             <div class="col">
-                                <p class="lead mb-0 text-left">£{{ programme.cost }}</p>
+                                <p class="lead mb-0 text-left">£{{ programme.programme_cost }}</p>
                                 <small class="text-muted">{{ programme.programme_length }}</small>
                             </div>
                         </div>
                     </div>
                     {% if request.user.is_superuser %}
                     <small class="ml-3">
-                        <a href="{% url 'programmes' programme.id %}">Edit</a> |
-                        <a class="text-danger" href="{% url 'programmes' programme.id %}">Delete</a>
+                        <a href="">Edit</a> |
+                        <a class="text-danger" href="">Delete</a>
                     </small>
                     {% endif %}
                 </div>
@@ -76,15 +76,6 @@
         </div>
     </div>
 </div>
-<!--<div class="overlay">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                {{ programmes }}
-            </div>
-        </div>
-    </div>
-</div>-->
 {% endblock %}
 
 {% block postloadjs %}
