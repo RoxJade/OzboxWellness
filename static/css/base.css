@@ -21,6 +21,18 @@ body {
     width: 1.5 rem;
 }
 
+/* ---------------------------------- Backgrounds */
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: white;
+    z-index: -1;
+}
+
 .light-background {
     padding: 100px 100px 100px 100px;
     background-attachment: fixed;
@@ -42,6 +54,10 @@ body {
     font-size: 40px;
     letter-spacing: .2em;
     color: #7ab1c1;
+}
+
+.header {
+    padding-top: 100px;
 }
 
 /*.heart {
@@ -173,7 +189,7 @@ a.dropdown-item:hover {
     color: #808080;  
 }
 
-/* -------------------------------- Hero Image grid */
+/* -------------------------------- Home - Hero Image grid */
 
 .grid {
     display: grid;
