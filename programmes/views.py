@@ -19,7 +19,7 @@ def all_programmes(request):
 def programme_detail(request, programme_id):
     """ A view to show individual programme details """
 
-    programme = get_object_or_404(Programme, pk=programme_id)
+    programme = get_object_or_404(Programmes, pk=programme_id)
 
     context = {
         'programme': programme,
