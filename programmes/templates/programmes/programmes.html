@@ -76,12 +76,19 @@
         </div>
     </div>
 </div>
+<div>
+    <a>
+        <i class="btt-link fas fa-arrow-up float-right mr-5 pb-4"></i>
+    </a>	
+</div>
 {% endblock %}
 
 {% block postloadjs %}
     {{ block.super }}
     <script type="text/javascript">
-
+        $('.btt-link').click(function(e) {
+			window.scrollTo(0,0)
+		})
     </script>
 {% endblock %}
 

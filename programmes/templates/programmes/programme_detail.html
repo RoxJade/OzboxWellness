@@ -17,7 +17,7 @@
 {% block content %}
 <div class="container-fluid">
     <div class="row programme-detail-row">
-        <div class="col-12 col-md-6 col-lg-4">
+        <div class="col-12 col-md-6 col-lg-4 mx-auto">
             <div class="image-container my-5">
                 {% if programme.image %}
                     <a href="{{ programme.image.url }}" target="_blank">
@@ -44,40 +44,6 @@
         </div>
     </div>
 </div>  
-
-<!--<div class="container-fluid">
-    <div class="row programme-detail-row">
-        <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
-            <div class="image-container my-5">
-                {% if programme.image %}
-                    <a href="{{ programme.image.url }}" target="_blank">
-                        <img class="card-img-top img-fluid" src="{{ programme.image.url }}" alt="{{ programme.name }}">
-                    </a>
-                    {% else %}
-                    <a href="">
-                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ programme.name }}">
-                    </a>
-                {% endif %}
-            </div>
-        </div>
-        <div class="programme-details col-12 col-md-6 col-lg-4">
-            <div class="programme-details-container mb-5 mt-md-5">
-                <h5 class="mb-0 mt-4 font-weight-bold lead">{{ programme.name }}</h5>
-                <small class="text-muted mt-3">{{ programme.programme_length }}</small>
-                <p class="lead mt-3 mb-0 text-left">£{{ programme.programme_cost }}</p>
-                <p class="description-text mt-3">{{ programme.description }}</p>
-                <!--{% if request.user.is_superuser %}
-                <small>
-                    <a href="{% url 'edxit_programme' programme.id %}">Edit</a> |
-                    <a class="text-danger" href="{% url 'delete_programme' programme.id %}">Delete</a>
-                </small>
-                {% endif %}-->
-            <!--</div>
-        </div>
-    </div>
-</div>-->
-
-
 {% endblock %}
 
 {% block postloadjs %}
